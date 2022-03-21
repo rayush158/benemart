@@ -1,51 +1,83 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+  --light: #fcfcfc;
+  --primary: #3185fc;
+  --danger: #cc2936;
+  --dark: #242331;
+  --bg-color: #cfcfcf;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--light);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  background-color: var(--dark);
+  box-shadow: 0 2px 6px 2px grey;
+}
+header > nav {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
 }
 
-.App-header {
-  background-color: #22201c;
-  min-height: 100vh;
+.nav-logo {
+  width: 3rem;
+}
+.nav-list {
+  margin: 0 1rem;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-item {
+  height: 100%;
+  padding: 0 0.5rem;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: space-between;
+}
+
+.input-search {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 16px;
+  margin: 3rem;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border: none;
+}
+.input-search:focus {
+  outline: none;
+  background-color: var(--bg-color);
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+}
+.nav-item:hover {
+  border-radius: 1rem;
+  background-color: var(--bg-color);
+  color: var(--dark);
+}
+.user-section:hover {
+  border-radius: 1.5rem;
+  background-color: var(--bg-color);
+  color: var(--dark);
+}
+
+.user-section > .sign-in {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.brand-title {
-  font-size: 3rem;
-  color: #d9d9d9;
-}
-
-.brand-title span {
-  color: #ffde59;
-}
-
-.brand-description {
-  font-size: 1.4rem;
-}
-
-.links {
-  display: flex;
-}
-
-.links a {
-  color: #d9d9d9;
-  font-size: 1.2rem;
-  margin: 1rem;
 }
