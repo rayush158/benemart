@@ -1,3 +1,64 @@
+/* - - - - - - - - - - - - - - - - - - - */
+/* Reset CSS */
+/* - - - - - - - - - - - - - - - - - - - */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* - - - - - - - - - - - - - - - -- - - - - - - - */
+/* Font Style */
+/* - - - - - - - - - - - - - - - -- - - - - - - - */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 :root {
   --light: #fcfcfc;
@@ -7,11 +68,13 @@
   --bg-color: #cfcfcf;
 }
 
+/* Custom CSS */
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   color: var(--light);
+  background-color: var(--dark);
 }
 
 header {
@@ -26,7 +89,7 @@ header > nav {
 }
 
 .nav-logo {
-  width: 3rem;
+  width: 2rem;
 }
 .nav-list {
   margin: 0 1rem;
@@ -36,29 +99,21 @@ header > nav {
   align-items: center;
   justify-content: space-between;
 }
+.nav-left {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: space-around;
+}
+
 .nav-item {
-  height: 100%;
   padding: 0 0.5rem;
 }
 .nav-right {
   display: flex;
   align-items: center;
-  width: 20%;
-  justify-content: space-between;
-}
-
-.input-search {
-  box-sizing: border-box;
-  display: inline-block;
-  font-size: 16px;
-  margin: 3rem;
-  padding: 0.8rem;
-  border-radius: 2rem;
-  border: none;
-}
-.input-search:focus {
-  outline: none;
-  background-color: var(--bg-color);
+  width: 25%;
+  justify-content: space-around;
 }
 
 .user-section {
@@ -80,4 +135,41 @@ header > nav {
 .user-section > .sign-in {
   display: flex;
   flex-direction: column;
+}
+
+.header-container {
+  background-color: inherit;
+  padding: 0 var(--space-xxxl);
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark-light);
+  border-radius: 2rem;
+  padding: 0 0.5rem;
+  width: var(--space-xxxl);
+}
+
+.input-rounded {
+  border-radius: var(--radius-md);
+  width: auto;
+}
+
+.input-group input {
+  flex: 1 1 auto;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: inherit;
+}
+.input-group input:hover {
+  outline: none;
+  box-shadow: none;
+}
+.input-group input:focus {
+  outline: none;
+  box-shadow: none;
 }
